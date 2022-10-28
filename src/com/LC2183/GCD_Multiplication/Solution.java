@@ -4,6 +4,13 @@ import java.util.*;
 
 public class Solution {
 
+    /* Hints:
+    遍历nums里的每个v, 计算g=GCD(v, k)
+    假设v=g*h, 可以忽略h, 然后更新count[g]
+    两层遍历count所有键，g和h
+    如果g==h, ans+=count[g]*(count[g]-1)/2
+    如果g<h, ans+=count[g]*count[h]
+    */
     /* Steps:            nums = [1,2,3,4,5], k = 2
                           gcd = [1,2,1,2,1]
                         count = { 1=3, 2=2}
